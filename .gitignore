@@ -8,3 +8,6 @@
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
+
+/tools/*/vendor/
+.php-cs-fixer.cache
