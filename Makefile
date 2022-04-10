@@ -5,6 +5,9 @@ DOCKER_COMPOSER=$(DOCKER_RUN) composer:2 --prefer-dist --optimize-autoloader
 vendor:
 	$(DOCKER_COMPOSER) install
 
+run: vendor
+	$(DOCKER_PHP) src/app.php $(INPUT) $(OUTPUT) -vvv
+
 tools/php-cs-fixer/vendor:
 	$(DOCKER_COMPOSER) install --working-dir=tools/php-cs-fixer
 
