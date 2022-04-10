@@ -10,3 +10,6 @@ tools/php-cs-fixer/vendor:
 
 fix: tools/php-cs-fixer/vendor
 	$(DOCKER_PHP) tools/php-cs-fixer/vendor/bin/php-cs-fixer fix src
+
+test: vendor
+	$(DOCKER_PHP) bin/phpunit tests
